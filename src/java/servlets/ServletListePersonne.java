@@ -35,7 +35,7 @@ public class ServletListePersonne extends HttpServlet {
         PrintWriter out = response.getWriter();
         String nom = null, prenom = null, adresse = null, ville = null;
         try {
-            HtmlHttpUtils.doHeader("liste des personnes", out);
+            HtmlHttpUtils.doHeader("Liste des personnes", out);
 
             if (HtmlHttpUtils.isAuthenticate(request)) {
                 nom = request.getParameter("nom");

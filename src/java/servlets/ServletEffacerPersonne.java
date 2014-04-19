@@ -51,8 +51,13 @@ public class ServletEffacerPersonne extends HttpServlet {
                             out.println("<tr><td>" + p.getId() + " : " + p.getNom() + " , " + p.getPrenom() + " , " + p.getAdresse() + " , " + p.getVille() + "</td><td><a href='ServletFaireEffacementPersonne?id=" + p.getId() + "'>oui supprimer</a></td></tr>");
                         }
                         out.println("</table>");
+                        
+                        out.println("<div class=\"alert alert-success\">Personne effacée avec succès</div>") ;
 
 
+                    }
+                    else { 
+                        out.println("<div class=\"alert alert-error\">Un problème a été rencontré lors de la suppression</div>") ;
                     }
                 }
 

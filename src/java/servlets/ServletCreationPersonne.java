@@ -39,15 +39,22 @@ public class ServletCreationPersonne extends HttpServlet {
                 prenom = request.getParameter("prenom");
                 adresse = request.getParameter("adresse");
                 ville = request.getParameter("ville");
+                
 
                 if (nom != null && prenom != null) {
                     if (!nom.equals("") && !prenom.equals("")) {
                         PersonneDAO p = new PersonneDAO();
                         Long id = p.create(new Personne(nom, prenom, adresse, ville));
-                        out.println("<p>" + id + "/" + nom + "/" + prenom + "/" + adresse + "/" + ville + "</p>");
+                        out.println("<div class=\"alert alert-success\">Enregistrement réussi pour : "+nom + prenom+"</div>");
+                      //  out.println("<p>" + id + "/" + nom + "/" + prenom + "/" + adresse + "/" + ville + "</p>");
                     } else {
-                        out.println("<p>nom et prenom ne doivent pas etre null !!</p>");
+                         out.println("<div class=\"alert alert-error\">Veuillez insérer un nom et/ou un prenom</div>");
+                      //  out.println("<p class=""bg-danger">nom et prenom ne doivent pas etre null !!</p>");
                     }
+                }
+                else 
+                {
+                 out.println("<div class=\"alert alert-error\"> Veuillez insérer un nom et/ou un prenom </div>");   
                 }
                 /* TODO output your page here
                 out.println("<h1>Servlet ServletCreationPersonne at " + request.getContextPath () + "</h1>");

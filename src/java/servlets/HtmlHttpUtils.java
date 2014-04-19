@@ -33,6 +33,10 @@ public class HtmlHttpUtils {
         out.println("<a href=\"index.jsp\">Accueil</a>");
         out.println("<a href=\"recherchePersonne.jsp\">Rechercher des personnes</a>");
         out.println("<a href=\"creationPersonne.jsp\">Créer une personne</a>");
+        out.println("<a href=\"ServletListePersonne\">Liste des personnes</a>");
+        out.println("<a href=\"profil.jsp\">Mon profil</a>");
+        out.println("<a href=\"points.jsp\">Mes points</a>");
+        out.println(" <a href=\"aide.jsp\">Aide</a>");
         out.println("</nav>");
         out.println("<div id=\"content\">");
     }

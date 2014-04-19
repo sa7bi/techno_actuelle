@@ -37,8 +37,8 @@ public class ServletFaireMAJPersonne extends HttpServlet {
                 nom = request.getParameter("nom");
                 prenom = request.getParameter("prenom");
                 adresse = request.getParameter("adresse");
-                ville = request.getParameter("ville");
-
+                ville = request.getParameter("ville");                
+                
                 Personne p = new Personne(Long.parseLong(id), nom, prenom, adresse, ville);
 
                 PersonneDAO pdao = new PersonneDAO();
